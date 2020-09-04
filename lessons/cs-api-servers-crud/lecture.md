@@ -39,22 +39,22 @@ The first thing we should do is design our API to support all of these and to fo
 
 We will follow these guidelines while building our API:
 
-- Game is the model we are going to manage
+- GameNight is the model we are going to manage
 - If an endpoint uses the `GET` verb we expect the endpoint to return the same resource each time and not modify it.
 - If an endpoint uses `POST/PUT/DELETE` it will modify the resource in some way.
-- `POST` will modify the "list of all games" resource by adding a new Game.
+- `POST` will modify the "list of all game nights" resource by adding a new GameNight.
 - `PUT` will modify a specific game by supplying new values
-- `DELETE` will modify a specific game by removing it from the "list of all games"
+- `DELETE` will modify a specific game by removing it from the "list of all game nights"
 
 ---
 
-| Endpoint           | Purpose                                                                                                                           |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
-| GET /games         | Gets a list of all games                                                                                                          |
-| GET /games/{id}    | Gets the single specific game given by its id                                                                                     |
-| POST /games        | Creates a new game, assigning a new ID for the game. The properties of the game are given as JSON in the BODY of the request      |
-| PUT /games/{id}    | Updates the single specific game given by its id. The updated properties of the game are given by JSON in the BODY of the request |
-| DELETE /games/{id} | Deletes the specific game given by its id                                                                                         |
+| Endpoint                    | Purpose                                                                                                                                       |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| GET /api/GameNights         | Gets a list of all game nights                                                                                                                |
+| GET /api/GameNights/{id}    | Gets the single specific game night given by its id                                                                                           |
+| POST /api/GameNights        | Creates a new game night, assigning a new Id. The properties of the game night are given as JSON in the BODY of the request                   |
+| PUT /api/GameNights/{id}    | Updates the single specific game night given by its id. The updated properties of the game night are given by JSON in the BODY of the request |
+| DELETE /api/GameNights/{id} | Deletes the specific game night given by its id                                                                                               |
 
 ---
 
@@ -82,11 +82,11 @@ dotnet new sdg-api -o GameDatabaseAPI
 
 # Generating an ERD
 
-Our ERD for this application is simple since it is only dealing with a single entity: a `Game`
+Our ERD for this application is simple since it is only dealing with a single entity: a `GameNight`
 
 ```
 +-------------------------+
-|          Game           |
+|       GameNight         |
 +-------------------------+
 | Id - SERIAL PRIMARY KEY |
 | Name - string           |
@@ -120,10 +120,10 @@ This is the idea of **Code First** database modeling. What we had done before, c
 
 The first thing we do is define our model.
 
-In the **Models** directory, create the `Game.cs` file and define all the fields.
+In the **Models** directory, create the `GameNight.cs` file and define all the fields.
 
 ```csharp
-public class Game
+public class GameNight
 {
     public int Id { get; set; }
     public string Name { get; set; }
@@ -146,12 +146,12 @@ public partial class DatabaseContext : DbContext
 {
 ```
 
-add this statement to let the `DatabaseContext` know we want to track `Game` in a `Games` table:
+add this statement to let the `DatabaseContext` know we want to track `GameNight` in a `GameNights` table:
 
 ```csharp
 public partial class DatabaseContext : DbContext
 {
-    public DbSet<Game> Games { get; set; }
+    public DbSet<GameNight> GameNights { get; set; }
 ```
 
 ---
@@ -171,7 +171,7 @@ dotnet build
 Then:
 
 ```shell
-dotnet ef migrations add AddGames
+dotnet ef migrations add CreateGameNights
 ```
 
 ---
@@ -180,7 +180,7 @@ dotnet ef migrations add AddGames
 
 The name of our migration should attempt to capture the database structure change we are making.
 
-In this case we are **Add** ing the `Games` table.
+In this case we are **Add** ing the `GameNights` table.
 
 ---
 
@@ -198,7 +198,7 @@ Most project questions of **why is my app not working** relates to a broken migr
 
 [.column]
 
-You should have at least two new files in `Migrations`, one ending in `_AddGames.cs`.
+You should have at least two new files in `Migrations`, one ending in `_AddGameNights.cs`.
 
 Open that file and ensure the `Up` method has code for creating a table and defining columns.
 
@@ -208,7 +208,7 @@ Open that file and ensure the `Up` method has code for creating a table and defi
 protected override void Up(MigrationBuilder migrationBuilder)
 {
     migrationBuilder.CreateTable(
-        name: "Games",
+        name: "GameNights",
         columns: table => new
         {
             Id = table.Column<int>(nullable: false)
@@ -222,7 +222,7 @@ protected override void Up(MigrationBuilder migrationBuilder)
         },
         constraints: table =>
         {
-            table.PrimaryKey("PK_Games", x => x.Id);
+            table.PrimaryKey("PK_GameNights", x => x.Id);
         });
 }
 ```
@@ -243,7 +243,7 @@ dotnet ef database update
 
 ---
 
-# [fit] This should create our `Games` table for us!
+# [fit] This should create our `GameNights` table for us!
 
 ---
 
@@ -253,8 +253,8 @@ To run the code generator:
 
 ```shell
 dotnet aspnet-codegenerator controller
-                            --model Game
-                            -name GamesController
+                            --model GameNight
+                            -name GameNightsController
                             --useAsyncActions
                             -api
                             --dataContext DatabaseContext
