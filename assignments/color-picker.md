@@ -40,12 +40,17 @@ Use `range` type `input` elements to drive a color display. You'll end up with s
 example:
 
 ```
-const currentColor = `hsl(50,8%,20%)`
+// HINT: Instead of hard coded values here, use your
+// this.state attributes to dynamically create this color
+const newBackgroundColor = `hsl(50,8%,20%)`
+const newStyle = { backgroundColor: newBackgroundColor  }
 ```
 
-```
-<div style={{ backgroundColor: currentColor }} >
-  Hello World
+Then you can dynamically set the `backgroundColor` of an element in your component using [inline styles](https://reactjs.org/docs/dom-elements.html#style)
+
+```jsx
+<div style={newStyle}>
+
 </div>
 ```
 

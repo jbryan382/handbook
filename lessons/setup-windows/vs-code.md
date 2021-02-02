@@ -21,41 +21,33 @@ into your Visual Studio Code
 
 ### General Extensions:
 
+In any PowerShell/Terminal (and any directory) run the following:
+
 ```shell
 code --install-extension 2gua.rainbow-brackets
-code --install-extension hasanali.gitignore-templates
 code --install-extension streetsidesoftware.code-spell-checker
+code --install-extension meganrogge.template-string-converter
 ```
 
 ### C#/.NET Extensions:
+
+In any PowerShell/Terminal (and any directory) run the following:
 
 ```shell
 code --install-extension ms-dotnettools.csharp
 code --install-extension austincummings.razor-plus
 code --install-extension jchannon.csharpextensions
 code --install-extension jorgeserrano.vscode-csharp-snippets
-code --install-extension ms-azuretools.vscode-docker
 ```
 
-<!--
-# These are not found
-```
-code --install-extension ms-dotnettools.csharp
-code --install-extension ScottSauber.blazorsnippets
+### Front End Extensions:
 
-``` -->
-
-## Front End Extensions:
+In any PowerShell/Terminal (and any directory) run the following:
 
 ```shell
-
-code --install-extension aeschli.vscode-css-formatter
-code --install-extension auchenberg.vscode-browser-preview
-code --install-extension coderfee.open-html-in-browser
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension ecmel.vscode-html-css
 code --install-extension esbenp.prettier-vscode
-code --install-extension hasanali.gitignore-templates
 code --install-extension skyran.js-jsx-snippets
 code --install-extension xabikos.ReactSnippets
 code --install-extension Zignd.html-css-class-completion
@@ -94,6 +86,7 @@ ask for assistance.
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
   "javascript.implicitProjectConfig.checkJs": true,
+  "files.eol": "\n",
   "[csharp]": {
     "editor.insertSpaces": true,
     "editor.tabSize": 4
@@ -103,13 +96,14 @@ ask for assistance.
 
 Save this file and close the tab.
 
-## Turn off all auto suggests in VS Code
+## OPTIONAL: Turn off all auto suggests in VS Code
 
-Some students do not like the auto complete nature of VS Code. If you want, you
-can turn these features off.
+Some students do not like the auto complete nature of VS Code. I recommend
+waiting to see if you find these auto complete suggestions helpful. Later, if
+you want you can turn these features off.
 
-Simply redo the 'Open Settings (JSON)" from above and just after the **opening**
-brace paste this:
+Redo the 'Open Settings (JSON)" from above and just after the **opening** brace
+paste this:
 
 ```
 "editor.suggest.showConstants": false,

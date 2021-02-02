@@ -20,13 +20,19 @@ want) and then click the `Default` button.
 > your instructor or fellow classmates to read you will be making it more
 > challenging to receive assistance.
 
-## Helpful environment variables
+## Make the window full height and width
 
-This setup step sets options for the "pager" -- the pager is a tool used to show
-information one-page-at-a-time in our terminal. This setup configures it not
-pause if the information it is showing is less than one screen full.
+The normal size for a terminal window is quite small. Often we'll need much more
+room to see all the details we'll need. The best way is to make our terminal
+windows take up the full height and width of our windows.
 
-```shell
-echo "export LESS=-F" >> ~/.zshrc
-echo "export LESS=-F" >> ~/.bash_profile
-```
+To do this:
+
+- Start Terminal
+- Under the Terminal menu choose "Preferences"
+- Click on the Profiles tab
+- Click on the text `Windows` on the right hand tab list. (HINT: It is in the
+  list `Text`, `Window`, `Tab`, `Shell`, `Keyboard`, `Advanced`)
+- In the section "Window Size" enter `1000` for both `Columns` and `Rows`
+- Close the preferences window
+

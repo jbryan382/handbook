@@ -6,35 +6,41 @@ A guide for students of the Suncoast Developers Guild.
 
 ## 🚀 Quick start for contributors
 
-1.  **Install dependencies.**
+1. **Enter the `web` directory.**
 
-    We use the `yarn` package manager.
+   ```shell
+   cd web
+   ```
 
-    ```shell
-    yarn install
-    ```
+1. **Install dependencies.**
 
-1.  **Start developing.**
+   We use the `yarn` package manager.
 
-    Navigate into the site’s directory and start it up.
+   ```shell
+   yarn install
+   ```
 
-    ```shell
-    cd web
-    yarn start
-    ```
+1. **Start developing.**
 
-1.  **Open the source code and start editing!**
+   Navigate into the site’s directory and start it up.
 
-    The handbook is now running at `http://localhost:8000`!
+   ```shell
+   cd web
+   yarn start
+   ```
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_.
-    This is a tool you can use to experiment with querying data. Learn more
-    about using this tool in the
-    [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+1. **Open the source code and start editing!**
+
+   The handbook is now running at `http://localhost:8000`!
+
+   _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_.
+   This is a tool you can use to experiment with querying data. Learn more about
+   using this tool in the
+   [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
 ## 🧐 What's inside?
 
-A quick look at the some of the files and directories you'll see.
+A quick look at the _some_ of the files and directories you'll see.
 
     .
     ├── assignments
@@ -43,37 +49,38 @@ A quick look at the some of the files and directories you'll see.
     ├── programs
     ├── warm-ups
     ├── web
-    ├── .prettierrc
+    ├── .prettierrc.json
     ├── LICENSE
     ├── README.md
 
 1. **`/assignments`**: This directory contains markdown formatted Assignments
    referenced by Lessons.
 
-2. **`/lessons`**: This directory contains Lesson definitions. Each lessons
+1. **`/lessons`**: This directory contains Lesson definitions. Each lessons
    contains markdown-formatted reading, lecture notes and associated
    presentations.
 
-3. **`/meta`**:
+1. **`/meta`**: Legacy content and some other things like writing style guides,
+   work-in-progress lessons, etc.
 
-4. **`/programs`**: YAML definitions of the Programs offered by SDG. This is
+1. **`/programs`**: YAML definitions of the Programs offered by SDG. This is
    where a Program is associated with Lessons (via Modules).
 
-5. **`/warm-ups`**: A sort-of miniature lesson/assignment used as a warm-up or
+1. **`/warm-ups`**: A sort-of miniature lesson/assignment used as a warm-up or
    practice outside of lecture time.
 
-6. **`/web`**: This directory contains the actual Gatsby project the powers our
+1. **`/web`**: This directory contains the actual Gatsby project the powers our
    Handbook.
 
-7. **`.prettierrc`**: This is a configuration file for
+1. **`.prettierrc.json`**: This is a configuration file for
    [Prettier](https://prettier.io/). Prettier is a tool to help keep the
    formatting of code consistent. All contributions to this repository should be
    formatted according to these rules.
 
-8. **`LICENSE`**: Our Handbook's content is licened up a Creative Commons (CC
+1. **`LICENSE`**: Our Handbook's content is licened up a Creative Commons (CC
    BY-SA 4.0) license. The web application is MIT.
 
-9. **`LICENSE`**: You're looking at it!
+1. **`README.md`**: You're looking at it!
 
 ## 🎓 Learning Gatsby
 

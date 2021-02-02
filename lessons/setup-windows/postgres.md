@@ -1,5 +1,5 @@
 ---
-title: Setting up PostgreSQL
+title: PostgreSQL
 ---
 
 The database engine we will be using for our back-end work.
@@ -14,6 +14,9 @@ pg_config --version
 
 If this comes back with a line similar to `PostgreSQL` followed by numbers:
 **STOP AND DISCUSS WITH YOUR INSTRUCTOR**
+
+If this comes back with a line that says `command not found` you may proceed to
+the next step.
 
 ```shell
 scoop install postgresql
@@ -52,11 +55,11 @@ scoop install python
 ```
 
 ```shell
-pip install https://github.com/suncoast-devs/handbook/raw/cddf635403ae4fa5c048eeea6477229e9e82d1e4/lessons/setup-windows/assets/setproctitle-1.1.10-cp38-cp38-win_amd64.whl
+pip install pgspecial click Pygments prompt_toolkit psycopg2 sqlparse configobj pendulum cli_helpers
 ```
 
 ```shell
-pip install pgcli
+pip install pgcli --no-deps
 ```
 
 <!--

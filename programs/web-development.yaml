@@ -38,12 +38,14 @@ modules:
       - sql-intro
       - sql-joins
       - cs-object-relational-mapping
+      - misc-how-does-the-internet-work
       - http-intro
       - misc-json
       - misc-api-intro
       # - misc-rest
       - cs-api-clients
       - cs-api-servers
+      - cs-api-servers-crud
       # - misc-optimizing-developer-workspace
       # - cs-other-enumerables (List, Queue, Dictionary, HashSet, Stack, )
   - front-end-fundamentals:
@@ -54,6 +56,7 @@ modules:
       - css-intro
       - css-layout
       - css-responsive
+      - front-end-safari
       - js-intro
       - js-enumeration
       - js-dom

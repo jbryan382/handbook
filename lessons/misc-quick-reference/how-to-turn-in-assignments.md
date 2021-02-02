@@ -14,29 +14,6 @@ in each of those modes.
 _inside_ the project directory. You need to `cd` into the directory where your
 project exists.
 
-### Step 0: Create a git repository.
-
-> **REMINDER** It is **critical** to make sure you are **in** the directory
-> where your project code is before starting these steps. Use the `pwd` or `ls`
-> commands to ensure you are in the directory where your code is. If you are
-> not, then use `cd` to go to that directory.
-
-You may have done this when you created your project. The tools we provide offer
-the option to create a `git` and `github` repository for you. If you chose that
-option you may skip this step.
-
-If you are unsure if you have a github repository you may use the command
-`hub browse` from your project directory. If this opens a github page with the
-name of your project you are all set. If you see a `404 Page Not Found` page you
-should follow these steps.
-
-How?
-
-0. Tell `git` to manage this directory: `git init`
-1. Tell `hub` to create a github repository for this directory: `hub create`
-
-This will create a git repository, both locally and on Github.
-
 ### Step 1: Commit your code to GitHub
 
 Once you are done, you will want to commit your code:
@@ -59,17 +36,13 @@ git push
 
 ### Step 2: Turning your code in.
 
-Once you have your code deployed and pushed to GitHub, go to the issue on our
-`assignments` repository in your web browser. As a comment, leave a link to the
-repository of your project and close the issue. **Your assignment is not
-considered done until you close the issue.**
+Once you have your code deployed and pushed to GitHub, visit Nexus and bring up
+the assignment. Click the `Turn In` button. Select the GitHub repository you
+created. Add a comment to let your instructor know anything specific about the
+state of your work. For example if you had any issues or challenges, this is
+where you would document those.
 
-> NOTE: To get the link to your repository, run the command `hub browse` from
-> your project directory. This opens github.com with your repository URL loaded.
-
-This link should look something like
-`https://www.github.com/your_username/project_name`.
-
-After you have closed the issue, your instructor evaluates your work, and leave
-any comments. If deemed incomplete or unaccepted the instructor re-opens the
-issue with a list of items to complete before turning in the assignment again.
+After you have turned in your code, your instructor evaluates your work, and
+leave any comments. If deemed incomplete or unaccepted the instructor re-opens
+the issue with a list of items to complete before turning in the assignment
+again.
