@@ -50,8 +50,7 @@ operations listed in the following table:
 | Unsigned right shift assignment | `x >>>= y`         | `x = x >>> y` |
 | Bitwise AND assignment          | `x &= y`           | `x = x & y`   |
 | Bitwise XOR assignment          | `x ^= y`           | `x = x ^ y`   |
-| Bitwise OR assignment           | `x |= y`           | `x = x | y`   |
-|                                 |                    |               |
+| Bitwise OR assignment           | `x \|= y`          | `x = x \| y`  |
 
 **Destructuring Assignment**
 
@@ -145,7 +144,7 @@ The following table summarizes JavaScript's bitwise operators.
 | Operator                                                                             | Usage     | Description                                                                                                              |
 | ------------------------------------------------------------------------------------ | --------- | ------------------------------------------------------------------------------------------------------------------------ |
 | Bitwise AND                                                                          | `a & b`   | Returns a one in each bit position for which the corresponding bits of both operands are ones.                           |
-| Bitwise OR                                                                           | `a | b`   |                                                                                                                          | Returns a zero in each bit position for which the corresponding bits of both operands are zeros. |
+| Bitwise OR                                                                           | `a        | b`                                                                                                                       |  | Returns a zero in each bit position for which the corresponding bits of both operands are zeros. |
 | Bitwise XOR                                                                          | `a ^ b`   | Returns a zero in each bit position for which the corresponding bits are the same.                                       |
 | [Returns a one in each bit position for which the corresponding bits are different.] |
 | Bitwise NOT                                                                          | `~ a`     | Inverts the bits of its operand.                                                                                         |
@@ -158,11 +157,10 @@ Bitwise operator examples
 | Expression | Result | Binary Description                           |
 | ---------- | ------ | -------------------------------------------- |
 | `15 & 9`   | `9`    | `1111 & 1001 = 1001`                         |
-| `15 | 9`   | `15`   | `1111 | 1001 = 1111`                         |
+| `15 \| 9`  | `15`   | `1111 \| 1001 = 1111`                        |
 | `15 ^ 9`   | `6`    | `1111 ^ 1001 = 0110`                         |
 | `~15`      | `-16`  | `~00000000...00001111 = 11111111...11110000` |
 | `~9`       | `-10`  | `~00000000...00001001 = 11111111...11110110` |
-|            |        |
 
 Bitwise shift operators
 
